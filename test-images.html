@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+</head>
+<body>
+    <h1>Testing Blog Images</h1>
+    
+    <h2>Image 1: sivanadi.jpg</h2>
+    <img src="images/sivanadi.jpg" alt="Sivanadi" style="max-width: 300px;">
+    
+    <h2>Image 2: durga.webp</h2>
+    <img src="images/durga.webp" alt="Durga" style="max-width: 300px;">
+    
+    <h2>Image 3: leaf.jpg</h2>
+    <img src="images/leaf.jpg" alt="Leaf" style="max-width: 300px;">
+    
+    <script>
+        // Test if images load
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.onload = () => console.log(`Image ${index + 1} loaded successfully`);
+            img.onerror = () => console.log(`Image ${index + 1} failed to load: ${img.src}`);
+        });
+    </script>
+</body>
+</html>
